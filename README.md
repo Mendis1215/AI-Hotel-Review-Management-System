@@ -256,6 +256,31 @@ MONGO_URI=your_mongodb_connection_string
 
 > The Python pipeline is triggered **automatically** by the Node.js backend when a review is submitted. No manual start required.
 
+### 5. Download the Training Dataset
+
+The raw dataset used to train the ML models is **not included** in this repository due to its large size (~230MB). You can download it from Kaggle:
+
+🔗 **[515K Hotel Reviews Data in Europe — Kaggle](https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe)**
+
+After downloading, place the CSV file in:
+```
+AIML_part/data/raw/Hotel_Reviews.csv
+```
+
+> **Note:** The trained model files (`.pkl`) are already included in the repository, so you **do not** need to re-train the models to run the application. The dataset is only needed if you want to retrain or modify the ML pipeline.
+
+---
+
+## Dataset
+
+| Property | Details |
+|----------|---------|
+| **Source** | [515K Hotel Reviews Data in Europe — Kaggle](https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe) |
+| **Size** | ~515,000 hotel reviews |
+| **Format** | CSV |
+| **Content** | Guest reviews from European hotels with ratings |
+| **Usage** | Training sentiment analysis, category classification, and complaint clustering models |
+
 ---
 
 ## Environment Variables
