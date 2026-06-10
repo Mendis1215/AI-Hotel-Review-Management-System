@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🏨 Y&I Villa — AI-Powered Hotel Review Management System
+# Y&I Villa — AI-Powered Hotel Review Management System
+### Hotel logo
+![Hotel Logo](docs/screenshots/Y&I.png)
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
@@ -14,15 +16,15 @@
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-### 🏠 Home Page
+### Home Page
 ![Y&I Villa Home Page](docs/screenshots/01_home.png)
 
-### 🧠 AI Intelligence Dashboard
+### AI Intelligence Dashboard
 ![AI Analytics Dashboard](docs/screenshots/02_ai_dashboard.png)
 
-### ✅ AI Actionable Recommendations (Structured View)
+### AI Actionable Recommendations 
 ![AI Recommendations](docs/screenshots/03_ai_recommendations.png)
 
 ---
@@ -54,28 +56,28 @@ When a guest submits a review, the Node.js backend automatically triggers the Py
 
 ---
 
-## ✨ Features
+## Features
 
-### 🌐 Public-Facing Features
+### Public-Facing Features
 - Beautiful landing page with villa overview and room listings
 - Public display of approved guest reviews
 - Contact page
 - Customer registration and login
 
-### 👤 Customer Portal
+### Customer Portal
 - Personal dashboard showing bookings and reviews
 - Room booking with check-in/out date selection and special requests
 - Submit reviews with star ratings
 - View AI analysis results on own submitted reviews
 
-### 👑 Admin Panel
+### Admin Panel
 - **Main Dashboard** — Live KPIs: total customers, active bookings, pending reviews, occupancy rate
 - **AI Intelligence Dashboard** — Interactive charts: sentiment pie chart, monthly trend line chart, complaint category donut chart, cluster ranking bar chart, top issue alert, AI recommendation table
 - **Review Management** — Approve or delete reviews, view AI-generated sentiment and category
 - **Booking Management** — Approve or reject customer bookings
 - **Customer Management** — View and delete customer accounts
 
-### 🤖 AI/ML Engine
+### AI/ML Engine
 - **Sentiment Analysis** — Logistic Regression model (Positive / Negative)
 - **Category Classification** — Multi-class classifier (Rooms / Staff / Food / Other)
 - **K-Means Complaint Clustering** — Groups negative reviews into 4 specific complaint clusters per category (16 clusters total)
@@ -84,7 +86,7 @@ When a guest submits a review, the Node.js backend automatically triggers the Py
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
@@ -116,7 +118,7 @@ When a guest submits a review, the Node.js backend automatically triggers the Py
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend
 | Technology | Purpose |
@@ -195,12 +197,12 @@ When a customer submits a review, the following 7-step pipeline runs automatical
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 - Node.js v18+
 - Python 3.10+
-- MongoDB Atlas account (or local MongoDB)
+- MongoDB Atlas 
 - Google Gemini API key
 
 ### 1. Clone the Repository
@@ -257,7 +259,7 @@ MONGO_URI=your_mongodb_connection_string
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 ### `SE_part/backend/.env`
 | Variable | Description | Example |
@@ -374,10 +376,10 @@ Y&I_Villa/
 
 ## 👨‍💻 Author
 
-**Mendis** — SLIIT University, Sri Lanka
+**Menuri Mendis** — SLIIT University, Sri Lanka
 
 ---
 
 <div align="center">
-  <p>Y&I Villa(docs/screenshots/Y&I.png)</p>
+  <p>Y&I Villa</p>
 </div>
