@@ -92,15 +92,15 @@ When a guest submits a review, the Node.js backend automatically triggers the Py
 └─────────────────────────┬──────────────────────────────────────────┘
                           │ HTTP (React SPA)
 ┌─────────────────────────▼──────────────────────────────────────────┐
-│                    FRONTEND  (React + Vite)                         │
-│  Public Pages │ Customer Dashboard │ Admin Panel + AI Dashboard     │
+│                    FRONTEND  (React + Vite)                        │
+│  Public Pages │ Customer Dashboard │ Admin Panel + AI Dashboard    │
 └─────────────────────────┬──────────────────────────────────────────┘
                           │ REST API (Axios)
 ┌─────────────────────────▼──────────────────────────────────────────┐
-│                  BACKEND  (Node.js + Express)                       │
+│                  BACKEND  (Node.js + Express)                      │
 │  /api/auth  │  /api/reviews  │  /api/bookings  │  /api/analytics   │
-│                     JWT Auth + bcrypt                               │
-└────────┬────────────────┬───────────────────────────────────────────┘
+│                     JWT Auth + bcrypt                              │
+└────────┬────────────────┬──────────────────────────────────────────┘
          │                │ child_process.spawn()
          │         ┌──────▼────────────────────────────────────────┐
          │         │        PYTHON AI PIPELINE                     │
@@ -109,7 +109,7 @@ When a guest submits a review, the Node.js backend automatically triggers the Py
          │         └──────┬────────────────────────────────────────┘
          │                │
 ┌────────▼────────────────▼──────────────────────────────────────────┐
-│                      MongoDB Atlas                                  │
+│                      MongoDB Atlas                                 │
 │         Users  │  Bookings  │  Reviews (+ AI results)              │
 └────────────────────────────────────────────────────────────────────┘
 ```
@@ -346,7 +346,7 @@ Y&I_Villa/
 
 ---
 
-## 👥 User Roles
+## User Roles
 
 | Role | Access Level | Key Abilities |
 |------|-------------|---------------|
@@ -354,65 +354,16 @@ Y&I_Villa/
 | **Customer** | Login required | Book rooms, submit reviews, view personal dashboard |
 | **Admin** | Staff login required | Full admin panel, AI analytics, manage all bookings/reviews/customers |
 
----
 
-## 🔌 API Endpoints
+## Future Enhancements
 
-### Auth (`/api/auth`)
-| Method | Endpoint | Access | Description |
-|--------|----------|--------|-------------|
-| POST | `/register` | Public | Create customer account |
-| POST | `/login` | Public | Login & receive JWT |
-| GET | `/profile` | Private | Get current user profile |
-| GET | `/users` | Admin | Get all customers |
-| DELETE | `/users/:id` | Admin | Delete a customer |
+### Room Availability Tracking
 
-### Reviews (`/api/reviews`)
-| Method | Endpoint | Access | Description |
-|--------|----------|--------|-------------|
-| POST | `/` | Customer | Submit review (triggers AI pipeline) |
-| GET | `/approved` | Public | Get all approved reviews |
-| GET | `/all` | Admin | Get all reviews |
-| GET | `/my` | Customer | Get own reviews |
-| PUT | `/:id/approve` | Admin | Approve a review |
-| DELETE | `/:id` | Admin | Delete a review |
+### Advanced Analytics
 
-### Bookings (`/api/bookings`)
-| Method | Endpoint | Access | Description |
-|--------|----------|--------|-------------|
-| POST | `/` | Customer | Create a booking |
-| GET | `/my` | Customer | Get own bookings |
-| GET | `/all` | Admin | Get all bookings |
-| PUT | `/:id/status` | Admin | Approve / Reject booking |
+### Email Notifications
 
-### Analytics (`/api/analytics`)
-| Method | Endpoint | Access | Description |
-|--------|----------|--------|-------------|
-| GET | `/summary` | Admin | KPIs for main dashboard |
-| GET | `/ai` | Admin | Full AI analytics data |
-
----
-
-## 🔮 Future Enhancements
-
-### 🛏️ Room Availability Tracking
-- Implement a real-time room availability calendar
-- Prevent double bookings by checking existing reservations before approval
-- Show available vs. occupied rooms per date range on the admin dashboard
-
-### 📊 Advanced Analytics
-- Add revenue analytics and monthly booking trend charts
-- Generate exportable PDF reports for hotel management
-- Include guest satisfaction score trends over time
-- Add multi-language review support with automatic translation before analysis
-
-### 📧 Email Notifications
-- Send booking confirmation emails to customers upon approval or rejection
-- Email admin alerts when a new negative review is received
-- Automated weekly AI insight summary email to hotel management
-- Password reset via email functionality
-
-### 🌟 Additional Improvements
+### Additional Improvements
 - **Real-time Updates** — WebSocket integration so admin sees new reviews without page refresh
 - **Mobile App** — React Native companion app for hotel staff
 - **Multi-property Support** — Extend the platform to manage multiple hotel properties
@@ -428,5 +379,5 @@ Y&I_Villa/
 ---
 
 <div align="center">
-  <p>Made with ❤️ for Y&I Villa</p>
+  <p>Y&I Villa(docs/screenshots/Y&I.png)</p>
 </div>
