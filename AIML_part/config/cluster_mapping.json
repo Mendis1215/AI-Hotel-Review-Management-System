@@ -1,0 +1,29 @@
+{
+  "Rooms": {
+    "0": "Bed Comfort Issues",
+    "1": "Room Facilities & Bathroom Issues",
+    "2": "In-Room Amenities Issues",
+    "3": "Room Size Issues"
+  },
+
+  "Staff": {
+    "0": "Slow Service Issues",
+    "1": "Check-In / Reception Delays",
+    "2": "Staff Behaviour Issues",
+    "3": "General Staff Interaction"
+  },
+
+  "Food": {
+    "0": "Food Quality Issues",
+    "1": "Restaurant Availability Issues",
+    "2": "Breakfast Service Issues",
+    "3": "Food Pricing Issues"
+  },
+
+  "Other": {
+    "0": "Location & Accessibility Issues",
+    "1": "Parking & Cost Issues",
+    "2": "WiFi & Noise Issues",
+    "3": "Hotel Condition Issues"
+  }
+}
