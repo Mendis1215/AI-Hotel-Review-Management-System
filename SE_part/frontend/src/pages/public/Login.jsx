@@ -68,11 +68,6 @@ const Login = () => {
             <button type="submit" className="w-full btn-gold py-3">Log In</button>
           </form>
 
-          <div className="mt-5 grid grid-cols-2 gap-3">
-            <button className="border border-gray-200 rounded-md py-3 text-sm text-text-main hover:border-accent transition" type="button">Google</button>
-            <button className="border border-gray-200 rounded-md py-3 text-sm text-text-main hover:border-accent transition" type="button">Facebook</button>
-          </div>
-
           <p className="mt-8 text-sm text-text-muted">
             Do not have an account? <Link to="/register" className="text-accent-dark font-medium hover:underline">Register here</Link>
           </p>

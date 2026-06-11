@@ -65,7 +65,7 @@ const getAIAnalytics = async (req, res) => {
     const categorySplit = await Review.aggregate([
       { $match: { category: { $exists: true, $ne: 'Pending Analysis' } } },
       { $group: { _id: '$category', value: { $sum: 1 } } }
-    ]).then(data => data.map(item => ({ name: item._id, value: item.value })));
+    ]).then(data => data.map(item => ({ name: item._id === 'N/A' ? 'Positive' : item._id, value: item.value })));
 
     // 4. Cluster Ranking (Bar Chart)
     const clusterRanking = await Review.aggregate([
@@ -73,7 +73,7 @@ const getAIAnalytics = async (req, res) => {
       { $group: { _id: '$clusterMeaning', count: { $sum: 1 } } },
       { $sort: { count: -1 } },
       { $limit: 10 }
-    ]).then(data => data.map(item => ({ name: item._id, count: item.count })));
+    ]).then(data => data.map(item => ({ name: item._id === 'N/A' ? 'Positive' : item._id, count: item.count })));
 
     // 5. Monthly Trend (Line Chart)
     const monthlyTrend = await Review.aggregate([
