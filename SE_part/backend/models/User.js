@@ -15,6 +15,7 @@ const userSchema = mongoose.Schema(
     password: {
       type: String,
       required: true,
+      minlength: 8,
     },
     role: {
       type: String,
@@ -22,7 +23,9 @@ const userSchema = mongoose.Schema(
       default: 'customer',
     },
     phone: {
-      type: String,
+      type: Number,
+      minlength: 10,
+      unique: true,
     },
   },
   {
